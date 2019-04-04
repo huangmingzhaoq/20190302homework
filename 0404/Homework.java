@@ -29,7 +29,7 @@ public class Homework {
 //		int a4=num1/1000;//千位数字		
 //		System.out.println(a4+"+"+a3+"+"+a2+"+"+a1+"="+(a1+a2+a3+a4));
 		
-		int num1,num2,temp;
+		int num1,num2,temp=0;
 		System.out.print("整数1:");
 		num1=input.nextInt();
 		System.out.print("整数2:");
