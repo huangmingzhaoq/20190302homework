@@ -1,91 +1,113 @@
-package newer.com.demo;
-/**
- * ´òÓ¡¾Å¾Å³Ë·¨±í
- * @author Administrator
- *²ÂÈ­ÓÎÏ·
- */
+package com.newer.cn;
+
 import java.util.Random;
 import java.util.Scanner;
+
 public class Homework {
 
 	public static void main(String[] args) {
-//		for(int i=1;i<=9;i++) {
-//			for(int j=1;j<=i;j++) {
-//				System.out.print(j+"*"+i+"="+(i*j)+"\t");
-//			}
-//			System.out.println();
-//		}
-		int num,i;
-		double count=0;
-		String ans;
-		Scanner input=new Scanner(System.in);
-		
-		for( i=1;;i++) {
-			System.out.println("ÇëÓÃ»§³öÈ­£º1£¬¼ôµ¶ 2£¬Ê¯Í· 3£¬²¼ ");
-			num=input.nextInt();
-			if(num==1) {
-				System.out.println("Äú³öµÄÊÇ:¼ôµ¶");
+//1.æ‰“å°ä¹ä¹ä¹˜æ³•è¡¨
+//1*1=1
+//1*2=2 2*2=4
+//1*3=3 2*3=6 3*3=9
+//1*4=4 2*4=8 3*4=12 4*4=16
+//1*5=5       
+//	......
+//1*9=9 2*9=18...............9*9=81
+//	    int i=1, j=1;
+//		for( i=1;i<10;i++) {
+//      for( j=1;j<=i;j++) {
+//         
+//         
+//        System.out.print(i+"*"+j+"="+i*j+"\t");
+//        	
+//       if(j==i) {
+//    	  System.out.print("\n");
+//       }
+//       }
+//      }
+//1ã€ç”¨æˆ·é€‰æ‹©å‡ºæ‹³ï¼š1å‰ªåˆ€ã€2çŸ³å¤´ã€3å¸ƒ
+//2ã€è®¡ç®—æœºéšæœºå‡ºæ‹³
+//3ã€åˆ¤æ–­èƒœè´Ÿ
+//4ã€è¯¢é—®æ˜¯å¦ç»§ç»­
+//5ã€é€€å‡ºå¾ªç¯åï¼Œç»Ÿè®¡ç”¨æˆ·çš„èƒœç‡ã€‚
+		int cp = 0, i;String ans = null;//æ¥å—å­—ç¬¦ä¸²ç©ºå·
+		int count = 0;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("è¯·è¾“å…¥ä½ çš„æ•°å­—ï¼š");
+		int user = scanner.nextInt();
+		Random random = new Random();
+		for (i = 1;; i++) {
+			if (user == 1) {
+				System.out.println("å‰ªåˆ€");
 			}
-			if(num==2) {
-				System.out.println("Äú³öµÄÊÇ:Ê¯Í·");
+
+			if (user == 2) {
+				System.out.println("çŸ³å¤´");
 			}
-			if(num==3) {
-				System.out.println("Äú³öµÄÊÇ:²¼");
+
+			if (user == 3) {
+				System.out.println("å¸ƒ");
 			}
-			
-			Random a=new Random();
-			int r=a.nextInt(3)+1;
-			if(r==1) {
-				System.out.println("¼ÆËã»ú³öµÄÊÇ:¼ôµ¶");
+
+			cp = (int) (random.nextInt(3) + 1);
+			if (cp == 1) {
+				System.out.println("è®¡ç®—æœºå‡ºçš„çŸ³å¤´");
 			}
-			if(r==2) {
-				System.out.println("¼ÆËã»ú³öµÄÊÇ:Ê¯Í·");
+			if (cp == 2) {
+				System.out.println("è®¡ç®—æœºå‡ºçš„å‰ªåˆ€");
 			}
-			if(r==3) {
-				System.out.println("¼ÆËã»ú³öµÄÊÇ:²¼");
+			if (cp == 3) {
+				System.out.println("è®¡ç®—æœºå‡ºçš„å¸ƒ");
 			}
-		
-		if(num==1&&r==1) {
-			System.out.println("´ò³ÉÆ½ÊÖ");
-		}	
-		if(num==1&&r==2) {
-			System.out.println("¼ÆËã»úÓ®ÁË£¬ÄúÊäÁË");
-		}	
-		if(num==1&&r==3) {
-			System.out.println("ÄúÓ®ÁË£¬¼ÆËã»úÊäÁË");
-			count++;
-		}	
-		if(num==2&&r==1) {
-			System.out.println("ÄúÓ®ÁË£¬¼ÆËã»úÊäÁË");
-			count++;
-		}
-		if(num==2&&r==2) {
-			System.out.println("´ò³ÉÆ½ÊÖ");
-		}
-		if(num==2&&r==3) {
-			System.out.println("¼ÆËã»úÓ®ÁË£¬ÄúÊäÁË");
-		}
-		if(num==3&&r==3) {
-			System.out.println("´ò³ÉÆ½ÊÖ");
-		}
-		if(num==3&&r==2) {
-			System.out.println("ÄúÓ®ÁË£¬¼ÆËã»úÊäÁË");
-			count++;
-		}
-		if(num==3&&r==1) {
-			System.out.println("¼ÆËã»úÓ®ÁË£¬ÄúÊäÁË");
-		}
-		System.out.println("ÊÇ·ñ¼ÌĞø:ÊÇ(y) ·ñ(n)");
-		ans=input.next();
-		if("y".equals(ans)) {
+			if (user == 1 && cp == 1) {
+				System.out.println("ç”µè„‘èµ¢äº†");
+
+			}
+			if (user == 1 && cp == 2) {
+				System.out.println("å¹³æ‰‹");
+
+			}
+			if (user == 1 && cp == 3) {
+				System.out.println("ä½ èµ¢äº†");
+				count++;
+
+			}
+			if (user == 2 && cp == 1) {
+				System.out.println("å¹³æ‰‹");
+
+			}
+			if (user == 2 && cp == 2) {
+				System.out.println("ä½ èµ¢äº†");
+				count++;
+			}
+			if (user == 2 && cp == 3) {
+				System.out.println("ç”µè„‘èµ¢äº†");
+
+			}
+			if (user == 3 && cp == 1) {
+				System.out.println("ä½ èµ¢äº†");
+				count++;
+
+			}
+			if (user == 3 && cp == 2) {
+				System.out.println("ç”µè„‘èµ¢äº†");
+
+			}
+			if (user == 3 && cp == 3) {
+				System.out.println("å¹³æ‰‹");
+
+			}
+			System.out.println("æ˜¯å¦è¿˜è¦ç»§ç»­" + "y/n");
+			ans = scanner.next();
+			if ("y".equals(ans)) {// å¦‚æœæ¥å—çš„æ˜¯yç»§ç»­å¾ªç¯å¦åˆ™åœæ­¢å¾ªç¯
 			continue;
-		}else {
-			break;
-		}
-		
-		
-	}
-		System.out.println("Äú×Ü¹²Ê¤ÁË"+(int)count+"´Î");
-		System.out.println("Ê¤ÂÊÊÇ"+count/i*100+"%");
+
+					}
+			System.out.println(count++/i*100+"%");}
 	}
 }
+
+//Random random=new Random();
+//int x=random.nextInt(3);//å–0-2ä¹‹é—´çš„éšæœºæ•°
+//System.out.println(x);
