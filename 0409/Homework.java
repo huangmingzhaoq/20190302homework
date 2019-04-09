@@ -1,87 +1,91 @@
-package com.newer.demo;
-
+package newer.com.demo;
+/**
+ * ´òÓ¡¾Å¾Å³Ë·¨±í
+ * @author Administrator
+ *²ÂÈ­ÓÎÏ·
+ */
+import java.util.Random;
 import java.util.Scanner;
-
 public class Homework {
 
 	public static void main(String[] args) {
-		
-		Scanner scanner=new Scanner(System.in);
-		
-//		int sum=0;
-//		for(int i=1;i<=100;i+=2) {
-//			sum+=i;
-//		}
-//		System.out.println(sum);
-		
-//		int num,sum=0;
-//		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼š");
-//		num=scanner.nextInt();
-//		//ä»1ç´¯åŠ åˆ°è¾“å…¥çš„æ•´æ•°
-//		for(int i=1;i<=num;i++) {
-//			sum+=i;
-//		}
-//		System.out.println("sum="+sum);
-		
-//		int num,sub=1;
-//		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼š");
-//		num=scanner.nextInt();
-//		//ä»1ç´¯åŠ åˆ°è¾“å…¥çš„æ•´æ•°
-//		for(int i=1;i<=num;i++) {
-//			sub*=i;
-//		}
-//		System.out.println("sub="+sub);
-		
-//		int num,count=0;
-//		//å–0-99ä¹‹é—´çš„éšæœºæ•°
-//		int ran=(int)(Math.random()*100);
-//		
-//		do {
-//			do {
-//				System.out.println("è¯·çŒœä¸€ä¸ª0-99ä¹‹é—´çš„æ•°å­—:");
-//				num=scanner.nextInt();
-//			}while(num<0 || num>99);
-//			
-//			if(num>ran) {
-//				System.out.println("çŒœå¤§äº†ï¼");
+//		for(int i=1;i<=9;i++) {
+//			for(int j=1;j<=i;j++) {
+//				System.out.print(j+"*"+i+"="+(i*j)+"\t");
 //			}
-//			if(num<ran) {
-//				System.out.println("çŒœå°äº†");
-//			}
-//			count++;//è®°å½•çŒœçš„æ¬¡æ•°
-//		}while(num!=ran);
-//		
-//		if(count<5) {
-//			System.out.println("è¿æ°”çœŸå¥½!");
-//		}else if(count<10) {
-//			System.out.println("ç»ˆäºç»“æŸäº†å—ï¼");
-//		}else {
-//			System.out.println("ç©æ¸¸æˆèƒ½è®¤çœŸç‚¹å—ï¼Ÿ");
+//			System.out.println();
 //		}
+		int num,i;
+		double count=0;
+		String ans;
+		Scanner input=new Scanner(System.in);
 		
-//		int sum=0,sub=1;
-//		
-//		for(int i=1;i<=10;i++) {
-//			sub*=i;//å…ˆç´¯ä¹˜
-//			sum+=sub;//åç´¯åŠ 
-//		}
-//		System.out.println("sum="+sum);
-		
-		//æ°´ä»™èŠ±æ•°ï¼šç©·ä¸¾æ³•
-		for(int i=100;i<1000;i++) {
-			int a=i%10;
-			int b=i/10%10;
-			int c=i/100;
-			
-			if(a*a*a+b*b*b+c*c*c==i) {
-				System.out.print(i+"\t");
+		for( i=1;;i++) {
+			System.out.println("ÇëÓÃ»§³öÈ­£º1£¬¼ôµ¶ 2£¬Ê¯Í· 3£¬²¼ ");
+			num=input.nextInt();
+			if(num==1) {
+				System.out.println("Äú³öµÄÊÇ:¼ôµ¶");
 			}
+			if(num==2) {
+				System.out.println("Äú³öµÄÊÇ:Ê¯Í·");
+			}
+			if(num==3) {
+				System.out.println("Äú³öµÄÊÇ:²¼");
+			}
+			
+			Random a=new Random();
+			int r=a.nextInt(3)+1;
+			if(r==1) {
+				System.out.println("¼ÆËã»ú³öµÄÊÇ:¼ôµ¶");
+			}
+			if(r==2) {
+				System.out.println("¼ÆËã»ú³öµÄÊÇ:Ê¯Í·");
+			}
+			if(r==3) {
+				System.out.println("¼ÆËã»ú³öµÄÊÇ:²¼");
+			}
+		
+		if(num==1&&r==1) {
+			System.out.println("´ò³ÉÆ½ÊÖ");
+		}	
+		if(num==1&&r==2) {
+			System.out.println("¼ÆËã»úÓ®ÁË£¬ÄúÊäÁË");
+		}	
+		if(num==1&&r==3) {
+			System.out.println("ÄúÓ®ÁË£¬¼ÆËã»úÊäÁË");
+			count++;
+		}	
+		if(num==2&&r==1) {
+			System.out.println("ÄúÓ®ÁË£¬¼ÆËã»úÊäÁË");
+			count++;
+		}
+		if(num==2&&r==2) {
+			System.out.println("´ò³ÉÆ½ÊÖ");
+		}
+		if(num==2&&r==3) {
+			System.out.println("¼ÆËã»úÓ®ÁË£¬ÄúÊäÁË");
+		}
+		if(num==3&&r==3) {
+			System.out.println("´ò³ÉÆ½ÊÖ");
+		}
+		if(num==3&&r==2) {
+			System.out.println("ÄúÓ®ÁË£¬¼ÆËã»úÊäÁË");
+			count++;
+		}
+		if(num==3&&r==1) {
+			System.out.println("¼ÆËã»úÓ®ÁË£¬ÄúÊäÁË");
+		}
+		System.out.println("ÊÇ·ñ¼ÌĞø:ÊÇ(y) ·ñ(n)");
+		ans=input.next();
+		if("y".equals(ans)) {
+			continue;
+		}else {
+			break;
 		}
 		
 		
-		
-		scanner.close();
-
 	}
-
+		System.out.println("Äú×Ü¹²Ê¤ÁË"+(int)count+"´Î");
+		System.out.println("Ê¤ÂÊÊÇ"+count/i*100+"%");
+	}
 }
