@@ -1,113 +1,76 @@
-package com.newer.cn;
-
+package com.one.text;
 import java.util.Random;
+
 import java.util.Scanner;
-
 public class Homework {
-
 	public static void main(String[] args) {
-//1.æ‰“å°ä¹ä¹ä¹˜æ³•è¡¨
+//µÚËÄÕÂ4ÔÂ9ÈÕ×÷Òµ
+//Ò»/
+//1£¬ÓÃ»§Ñ¡Ôñ³öÈ­£º1.¼ôµ¶¡£2.Ê¯Í·¡£3.²¼
+//2£¬¼ÆËã»úËæ»ú³öÈ­
+//3£¬ÅĞ¶ÏÊ¤¸º
+//4£¬Ñ¯ÎÊÊÇ·ñ¼ÌĞø
+//5£¬ÍË³öÑ­»·ºó£¬Í³¼ÆÓÃ»§µÄÊ¤ÂÊ
+//		Scanner Scanner = new Scanner(System.in);
+//		String a ;
+//		int count=0,win=0;
+//		do {
+//			
+//		System.out.println("ÇëÑ¡Ôñ³öÈ­£º1(¼ôµ¶),2(Ê¯Í·),3(²¼)");
+//		int me = Scanner.nextInt();
+//		System.out.println("¼ÆËã»úËæ»ú³öÈ­:1(¼ôµ¶),2(Ê¯Í·),3(²¼)");
+//		Random random = new Random();
+//		int computer = random.nextInt(3)+1;
+//		System.out.print("ÄúÊäÈëµÄÊÇ"+me+"¼ÆËã»úÊäÈëµÄÊÇ"+computer);//ÖØ¸´µÄ´úÂë³éÈ¡³É·½·¨public static void public(int sum)
+//		
+//		if (me == computer) {
+//			System.out.println("ÓÎÏ·½á¹ûÎªÆ½¾Ö£¡");
+//			
+//		}
+//		else if (me == 1 && computer == 3) {
+//			System.out.println("ÄúÊ¤Àû£¡");
+//			win+=1;
+//			
+//		}
+//		else if (me == 2 && computer == 1) {
+//			System.out.println("ÄúÊ¤Àû£¡");
+//			win+=1;
+//			
+//		}
+//		else if (me == 3 && computer == 2) {
+//			System.out.println("ÄúÊ¤Àû£¡");
+//			win+=1;
+//			
+//		}
+//		else {
+//			System.out.println("¼ÆËã»úÊ¤Àû£¡");
+//			
+//		}
+//		count+=1;
+//		System.out.println("ÊÇ·ñ¼ÌĞø²ÂÈ­ÓÎÏ·£¿yes£¨¼ÌĞø£© /  no£¨Í£Ö¹£©");
+//		a = Scanner.next();
+//		} while ("yes".equals(a));
+//			System.out.println("ÓÎÏ·½áÊø£¡");
+//		   System.out.println("ÄúµÄÊ¤ÂÊÎª£º"+win/(double)count*100+"%");
+
+	
+//¶ş/
+//1.´òÓ¡¾Å¾Å³Ë·¨±í
 //1*1=1
 //1*2=2 2*2=4
 //1*3=3 2*3=6 3*3=9
 //1*4=4 2*4=8 3*4=12 4*4=16
 //1*5=5       
-//	......
+//......
 //1*9=9 2*9=18...............9*9=81
-//	    int i=1, j=1;
-//		for( i=1;i<10;i++) {
-//      for( j=1;j<=i;j++) {
-//         
-//         
-//        System.out.print(i+"*"+j+"="+i*j+"\t");
-//        	
-//       if(j==i) {
-//    	  System.out.print("\n");
-//       }
-//       }
-//      }
-//1ã€ç”¨æˆ·é€‰æ‹©å‡ºæ‹³ï¼š1å‰ªåˆ€ã€2çŸ³å¤´ã€3å¸ƒ
-//2ã€è®¡ç®—æœºéšæœºå‡ºæ‹³
-//3ã€åˆ¤æ–­èƒœè´Ÿ
-//4ã€è¯¢é—®æ˜¯å¦ç»§ç»­
-//5ã€é€€å‡ºå¾ªç¯åï¼Œç»Ÿè®¡ç”¨æˆ·çš„èƒœç‡ã€‚
-		int cp = 0, i;String ans = null;//æ¥å—å­—ç¬¦ä¸²ç©ºå·
-		int count = 0;
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("è¯·è¾“å…¥ä½ çš„æ•°å­—ï¼š");
-		int user = scanner.nextInt();
-		Random random = new Random();
-		for (i = 1;; i++) {
-			if (user == 1) {
-				System.out.println("å‰ªåˆ€");
-			}
-
-			if (user == 2) {
-				System.out.println("çŸ³å¤´");
-			}
-
-			if (user == 3) {
-				System.out.println("å¸ƒ");
-			}
-
-			cp = (int) (random.nextInt(3) + 1);
-			if (cp == 1) {
-				System.out.println("è®¡ç®—æœºå‡ºçš„çŸ³å¤´");
-			}
-			if (cp == 2) {
-				System.out.println("è®¡ç®—æœºå‡ºçš„å‰ªåˆ€");
-			}
-			if (cp == 3) {
-				System.out.println("è®¡ç®—æœºå‡ºçš„å¸ƒ");
-			}
-			if (user == 1 && cp == 1) {
-				System.out.println("ç”µè„‘èµ¢äº†");
-
-			}
-			if (user == 1 && cp == 2) {
-				System.out.println("å¹³æ‰‹");
-
-			}
-			if (user == 1 && cp == 3) {
-				System.out.println("ä½ èµ¢äº†");
-				count++;
-
-			}
-			if (user == 2 && cp == 1) {
-				System.out.println("å¹³æ‰‹");
-
-			}
-			if (user == 2 && cp == 2) {
-				System.out.println("ä½ èµ¢äº†");
-				count++;
-			}
-			if (user == 2 && cp == 3) {
-				System.out.println("ç”µè„‘èµ¢äº†");
-
-			}
-			if (user == 3 && cp == 1) {
-				System.out.println("ä½ èµ¢äº†");
-				count++;
-
-			}
-			if (user == 3 && cp == 2) {
-				System.out.println("ç”µè„‘èµ¢äº†");
-
-			}
-			if (user == 3 && cp == 3) {
-				System.out.println("å¹³æ‰‹");
-
-			}
-			System.out.println("æ˜¯å¦è¿˜è¦ç»§ç»­" + "y/n");
-			ans = scanner.next();
-			if ("y".equals(ans)) {// å¦‚æœæ¥å—çš„æ˜¯yç»§ç»­å¾ªç¯å¦åˆ™åœæ­¢å¾ªç¯
-			continue;
-
-					}
-			System.out.println(count++/i*100+"%");}
+//		int a=0;
+//		for (int i = 1; i <= 9; i++) {
+//			for (int j = 1; j <=i; j ++) {
+//				 a = i*j;
+//				 System.out.print(j+"*"+i+"="+a+"\t");
+//			}
+//			System.out.println();
+//		}
+		
 	}
 }
-
-//Random random=new Random();
-//int x=random.nextInt(3);//å–0-2ä¹‹é—´çš„éšæœºæ•°
-//System.out.println(x);
