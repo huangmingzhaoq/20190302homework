@@ -87,6 +87,7 @@ public class Homework {
 //			}
 //			System.out.println();
 //		}
+<<<<<<< HEAD
 		int num,i;
 		double count=0;
 		String ans;
@@ -158,6 +159,10 @@ public class Homework {
 		
 <<<<<<< HEAD
 =======
+=======
+		
+		
+>>>>>>> b1af9a46f99bb1263b267cf8e74e37a7ac4503c4
 		
 		//		3.鎵撳嵃:
 		//			54321
@@ -269,9 +274,12 @@ public class Homework {
 //			}
 //		}
 		
+<<<<<<< HEAD
 >>>>>>> 8e570f696285452d8f2067c8ea39f5a45edc13c5
 	}
 		System.out.println("您总共胜了"+(int)count+"次");
 		System.out.println("胜率是"+count/i*100+"%");
+=======
+>>>>>>> b1af9a46f99bb1263b267cf8e74e37a7ac4503c4
 	}
 }
